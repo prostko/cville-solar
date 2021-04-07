@@ -237,7 +237,7 @@ export default function Home() {
                   href="#"
                   className="text-base font-medium text-gray-500 hover:text-gray-900"
                 >
-                  Pricing
+                  About Us
                 </a>
                 <a
                   href="#"
@@ -246,7 +246,9 @@ export default function Home() {
                   Partners
                 </a>
                 <a
-                  href="#"
+                  onClick={() =>
+                    window.open("https://suncollectors.solar/", "_blank")
+                  }
                   className="text-base font-medium text-gray-500 hover:text-gray-900"
                 >
                   Company
@@ -722,7 +724,7 @@ export default function Home() {
                         </h3>
                         <p className="mt-5 text-base text-gray-500">
                           The panels Sun Collectors installs are state of the
-                          art - no more blue and white cells - panels are now
+                          art - no more blue and white checkers - panels are now
                           dark, sleek and blend seemlessly into your existing
                           roof.
                         </p>
@@ -802,7 +804,7 @@ export default function Home() {
                     <div className="inline-flex rounded-md shadow">
                       <a
                         href="#"
-                        className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-yellow-200 hover:bg-gray-50"
+                        className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium font-bold rounded-md text-gray-700 bg-yellow-200 hover:bg-gray-50"
                       >
                         Schedule a Consultation
                       </a>
