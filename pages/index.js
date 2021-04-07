@@ -21,6 +21,7 @@ export default function Home() {
                     className="h-8"
                     height={100}
                     width={120}
+                    layout="intrinsic"
                     alt="Sun Collectors Logo"
                   />
                 </a>
@@ -254,15 +255,9 @@ export default function Home() {
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <a
                   href="#"
-                  className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium font-bold text-white bg-yellow-400 hover:bg-yellow-500"
                 >
-                  Sign in
-                </a>
-                <a
-                  href="#"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-600 hover:bg-blue-700"
-                >
-                  Sign up
+                  Get Your Free Custom Design
                 </a>
               </div>
             </div>
@@ -428,37 +423,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="py-6 px-5">
-                  <div className="grid grid-cols-2 gap-4">
-                    <a
-                      href="#"
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
-                    >
-                      Pricing
-                    </a>
-                    <a
-                      href="#"
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
-                    >
-                      Partners
-                    </a>
-                    <a
-                      href="#"
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
-                    >
-                      Company
-                    </a>
-                  </div>
+                  <div className="grid grid-cols-2 gap-4"></div>
                   <div className="mt-6">
-                    <a
-                      href="#"
-                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
-                    >
-                      Sign up
-                    </a>
                     <p className="mt-6 text-center text-base font-medium text-gray-500">
-                      Existing customer?
+                      Run the Numbers{" "}
                       <a href="#" className="text-gray-900">
-                        Sign in
+                        Get your Free Custom Design
                       </a>
                     </p>
                   </div>
@@ -478,7 +448,7 @@ export default function Home() {
                     <img
                       className="h-full w-full object-cover"
                       src="https://images.unsplash.com/flagged/photo-1566838616838-c3a720672aad?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
-                      alt="People working on laptops"
+                      alt="Solar panels across neighborhood roofs"
                     />
                     <div
                       className="absolute inset-0 bg-gray-400"
@@ -496,8 +466,8 @@ export default function Home() {
                     </h1>
                     <p className="mt-6 max-w-lg mx-auto text-center text-xl text-blue-100 sm:max-w-3xl">
                       Leverage our unique financing strategy to roll your
-                      financing payment into your electrical savings - so you
-                      can <em>Go Solar</em> with no out-of-pocket money, and
+                      financing payment into your energy savings - so you can{" "}
+                      <em>Go Solar</em> with no money out-of-pocket, and
                       absolutely{" "}
                       <span className="underline">
                         no increase to your current budget
@@ -514,7 +484,7 @@ export default function Home() {
                         </a>
                         <a
                           href="#"
-                          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
                         >
                           Find out More
                         </a>
@@ -525,42 +495,37 @@ export default function Home() {
               </div>
             </div>
             {/* Logo cloud */}
-            <div className="bg-gray-100">
-              <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-                <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
-                  Join over 1,000 customers already investing in their energy
-                </p>
-                <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-                  <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                    <img />
-                  </div>
-                  <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                    <img
-                      className="h-12"
-                      src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                      alt="Mirage"
-                    />
-                  </div>
-                  <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                    <img
-                      className="h-12"
-                      src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                      alt="StaticKit"
-                    />
-                  </div>
-                  <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
-                    <img
-                      className="h-12"
-                      src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                      alt="Transistor"
-                    />
-                  </div>
-                  <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
-                    <img
-                      className="h-12"
-                      src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                      alt="Workcation"
-                    />
+            {/* This example requires Tailwind CSS v2.0+ */}
+            <div className="bg-gray-200 bg-opacity-25">
+              <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+                <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+                  <h2 className="max-w-md mx-auto text-3xl font-extrabold text-blue-400 text-center lg:max-w-xl lg:text-left">
+                    Join 1,000+ Virginians already investing in their energy
+                  </h2>
+                  <div className="flow-root self-center mt-8 lg:mt-0">
+                    <div className="-mt-4 -ml-8 flex flex-wrap justify-between lg:-ml-4">
+                      <div className="mt-4 ml-8 flex flex-grow flex-shrink-0 justify-center lg:flex-grow-0 lg:ml-4">
+                        <img
+                          className="h-12"
+                          src="https://tailwindui.com/img/logos/workcation-logo-indigo-900.svg"
+                          alt="Workcation"
+                        />
+                      </div>
+                      <div className="mt-4 ml-8 flex flex-grow flex-shrink-0 justify-center lg:flex-grow-0 lg:ml-4">
+                        <img
+                          className="h-12"
+                          src="https://tailwindui.com/img/logos/tuple-logo-indigo-900.svg"
+                          alt="Tuple"
+                        />
+                      </div>
+                      <div className="mt-4 ml-8 flex flex-grow flex-shrink-0 justify-center lg:flex-grow-0 lg:ml-4">
+                        <img
+                          className="h-12"
+                          src="https://tailwindui.com/img/logos/level-logo-indigo-900.svg"
+                          alt="Level"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -570,28 +535,34 @@ export default function Home() {
           {/* This example requires Tailwind CSS v2.0+ */}
           <div className="relative bg-white py-16 sm:py-24 lg:py-24">
             <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-              <h2 className="text-base font-semibold tracking-wider text-indigo-600 uppercase">
+              <h2 className="text-base font-semibold tracking-wider text-blue-500 uppercase">
                 The best time to go solar was yesterday
               </h2>
               <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
                 Virginians' Energy bills are going to rise - fast.
               </p>
-              <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-                Virginia will remove almost all coal power plants by 2024, and
-                the Energy Companies are allowed to raise rates by 4% every year
-                for the next 10 years.
+              <p className="mt-5 max-w-prose mx-auto text-xl text-gray-600">
+                Virginia will close 95% of coal power plants by 2024, and in
+                response the Energy Companies are allowed to raise rates by 4%
+                every year for the next 10 years.{" "}
+                <span className="font-semibold">
+                  If you pay $250 a month, by 2030 you'll be paying{" "}
+                  <span className="font-bold">$370.06</span> <em>minimum</em>.
+                  Go solar now and get your energy for free.
+                </span>{" "}
               </p>
+
               <div className="mt-12">
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                   <div className="pt-6">
                     <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                       <div className="-mt-6">
                         <div>
-                          <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
-                            {/* Heroicon name: outline/cloud-upload */}
+                          <span className="inline-flex items-center justify-center p-3 bg-blue-600 rounded-md shadow-lg">
+                            {/* Heroicon name: outline/sun */}
                             <svg
-                              className="h-6 w-6 text-white"
                               xmlns="http://www.w3.org/2000/svg"
+                              className="h-6 w-6 text-white"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
@@ -601,7 +572,7 @@ export default function Home() {
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth={2}
-                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
                               />
                             </svg>
                           </span>
@@ -611,8 +582,8 @@ export default function Home() {
                         </h3>
                         <p className="mt-5 text-base text-gray-500">
                           The power you generate using the natural resource on
-                          your property is free for you - all you need is the
-                          system to capture it.
+                          your property is free - all you need is the system to
+                          capture it.
                         </p>
                       </div>
                     </div>
@@ -621,11 +592,11 @@ export default function Home() {
                     <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                       <div className="-mt-6">
                         <div>
-                          <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
-                            {/* Heroicon name: outline/lock-closed */}
+                          <span className="inline-flex items-center justify-center p-3 bg-blue-600 rounded-md shadow-lg">
+                            {/* Heroicon name: outline/receipt tax */}
                             <svg
-                              className="h-6 w-6 text-white"
                               xmlns="http://www.w3.org/2000/svg"
+                              className="h-6 w-6 text-white"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
@@ -635,7 +606,7 @@ export default function Home() {
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth={2}
-                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                                d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2zM10 8.5a.5.5 0 11-1 0 .5.5 0 011 0zm5 5a.5.5 0 11-1 0 .5.5 0 011 0z"
                               />
                             </svg>
                           </span>
@@ -655,41 +626,7 @@ export default function Home() {
                     <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                       <div className="-mt-6">
                         <div>
-                          <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
-                            {/* Heroicon name: outline/refresh */}
-                            <svg
-                              className="h-6 w-6 text-white"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                              />
-                            </svg>
-                          </span>
-                        </div>
-                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                          25 year warranty on Panels
-                        </h3>
-                        <p className="mt-5 text-base text-gray-500">
-                          Sun Collectors installs the best panels in the
-                          business, which includes a 25 year warranty on the
-                          entire system.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="pt-6">
-                    <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-                      <div className="-mt-6">
-                        <div>
-                          <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                          <span className="inline-flex items-center justify-center p-3 bg-blue-600 rounded-md shadow-lg">
                             {/* Heroicon name: outline/shield-check */}
                             <svg
                               className="h-6 w-6 text-white"
@@ -709,11 +646,45 @@ export default function Home() {
                           </span>
                         </div>
                         <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                          10 year Monitoring & Labor
+                          25 year warranty on Panels
+                        </h3>
+                        <p className="mt-5 text-base text-gray-500">
+                          Sun Collectors installs the best panels in the
+                          business, which include a 25 year warranty on the
+                          entire system.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="pt-6">
+                    <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                      <div className="-mt-6">
+                        <div>
+                          <span className="inline-flex items-center justify-center p-3 bg-blue-600 rounded-md shadow-lg">
+                            {/* Heroicon name: outline/shield-exclamation */}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-6 w-6 text-white"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                          10 year Free Monitoring
                         </h3>
                         <p className="mt-5 text-base text-gray-500">
                           Sun Collectors monitors your system remotely for any
-                          issues, repairs and replaces any components not
+                          issues; repairs and replaces any components not
                           operating at peak efficiency - free.
                         </p>
                       </div>
@@ -723,11 +694,11 @@ export default function Home() {
                     <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                       <div className="-mt-6">
                         <div>
-                          <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
-                            {/* Heroicon name: outline/cog */}
+                          <span className="inline-flex items-center justify-center p-3 bg-blue-600 rounded-md shadow-lg">
+                            {/* Heroicon name: outline/photograph */}
                             <svg
-                              className="h-6 w-6 text-white"
                               xmlns="http://www.w3.org/2000/svg"
+                              className="h-6 w-6 text-white"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
@@ -737,23 +708,19 @@ export default function Home() {
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth={2}
-                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                              />
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                               />
                             </svg>
                           </span>
                         </div>
                         <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                          Only the Best Looking Panels
+                          Aesthetically Pleasing
                         </h3>
                         <p className="mt-5 text-base text-gray-500">
                           The panels Sun Collectors installs are state of the
-                          art. They
+                          art - no more blue and white cells - panels are now
+                          dark, sleek and blend seemlessly into your existing
+                          roof.
                         </p>
                       </div>
                     </div>
@@ -762,11 +729,11 @@ export default function Home() {
                     <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                       <div className="-mt-6">
                         <div>
-                          <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
-                            {/* Heroicon name: outline/server */}
+                          <span className="inline-flex items-center justify-center p-3 bg-blue-600 rounded-md shadow-lg">
+                            {/* Heroicon name: outline/chart-bar */}
                             <svg
-                              className="h-6 w-6 text-white"
                               xmlns="http://www.w3.org/2000/svg"
+                              className="h-6 w-6 text-white"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
@@ -776,7 +743,7 @@ export default function Home() {
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth={2}
-                                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
                               />
                             </svg>
                           </span>
@@ -785,8 +752,10 @@ export default function Home() {
                           Increase Home Value
                         </h3>
                         <p className="mt-5 text-base text-gray-500">
-                          Ac tincidunt sapien vehicula erat auctor pellentesque
-                          rhoncus. Et magna sit morbi lobortis.
+                          A $30,000 increase in home value is average for
+                          Virginia's real estate market, and when rolled into a
+                          mortgage, any interest paid can be deducted from your
+                          taxes.
                         </p>
                       </div>
                     </div>
@@ -795,6 +764,50 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          <>
+            {/* This example requires Tailwind CSS v2.0+ */}
+            <div className="relative bg-blue-900">
+              <div className="h-56 bg-gray-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+                <img
+                  className="w-full h-full object-cover"
+                  src="https://images.unsplash.com/flagged/photo-1566838634698-48b165cb0a9d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80"
+                  alt
+                />
+                <div
+                  className="absolute inset-0 bg-gray-300"
+                  style={{ mixBlendMode: "multiply" }}
+                />
+              </div>
+              <div className="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+                <div className="md:ml-auto md:w-1/2 md:pl-10">
+                  <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300">
+                    Talk is cheap
+                  </h2>
+                  <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
+                    Get a custom design for free
+                  </p>
+                  <p className="mt-3 text-lg text-gray-300">
+                    Schedule a free consultation at a time that works for you,
+                    get a look at the design proposal and run the numbers. If it
+                    doesn't make sense, no harm done. <br /> Don't leave money
+                    on the table - lower your bills and save the planet at the
+                    same time.
+                  </p>
+                  <div className="mt-8">
+                    <div className="inline-flex rounded-md shadow">
+                      <a
+                        href="#"
+                        className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-yellow-200 hover:bg-gray-50"
+                      >
+                        Schedule a Consultation
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
         </main>
       </div>
     </>
