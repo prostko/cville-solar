@@ -1,8 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { useState } from "react";
 
 export default function Home() {
+  const [isOn, setIsOn] = useState(false);
+
   return (
     <>
       <div className="min-h-screen bg-white">
@@ -27,6 +30,9 @@ export default function Home() {
                   type="button"
                   className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                   aria-expanded="false"
+                  onClick={() => {
+                    setIsOn(!isOn);
+                  }}
                 >
                   <span className="sr-only">Open menu</span>
                   {/* Heroicon name: outline/menu */}
@@ -54,6 +60,9 @@ export default function Home() {
                     type="button"
                     className="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     aria-expanded="false"
+                    onClick={() => {
+                      setIsOn(!isOn);
+                    }}
                   >
                     <span>Solutions</span>
                     {/*
@@ -86,7 +95,10 @@ export default function Home() {
                        To: "opacity-0 translate-y-1"
                   */}
                   {/* TODO Make me work with the JS */}
-                  <div className="invisible absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                  <div
+                    className="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                    style={isOn ? {} : { display: "none" }}
+                  >
                     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                       <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                         <a
@@ -264,7 +276,10 @@ export default function Home() {
                 From: "opacity-100 scale-100"
                 To: "opacity-0 scale-95"
             */}
-            <div className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+            <div
+              style={isOn ? {} : { display: "none" }}
+              className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+            >
               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                 <div className="pt-5 pb-6 px-5">
                   <div className="flex items-center justify-between">
@@ -278,6 +293,9 @@ export default function Home() {
                     <div className="-mr-2">
                       <button
                         type="button"
+                        onClick={() => {
+                          setIsOn(!isOn);
+                        }}
                         className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                       >
                         <span className="sr-only">Close menu</span>
@@ -661,7 +679,7 @@ export default function Home() {
                         </h3>
                         <p className="mt-5 text-base text-gray-500">
                           Sun Collectors installs the best panels in the
-                          business, which includes a 20 year warranty on the
+                          business, which includes a 25 year warranty on the
                           entire system.
                         </p>
                       </div>
