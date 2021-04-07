@@ -1,10 +1,10 @@
 import Head from "next/head";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
     <>
-      {/* This example requires Tailwind CSS v2.0+ */}
       <div className="min-h-screen bg-white">
         <header>
           <div className="relative bg-white">
@@ -12,10 +12,13 @@ export default function Home() {
               <div className="flex justify-start lg:w-0 lg:flex-1">
                 <a href="#">
                   <span className="sr-only">Workflow</span>
-                  <img
-                    className="h-8 w-auto sm:h-10"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt
+                  <Image
+                    priority
+                    src="/images/sun-collectors-logo.png"
+                    className="h-8"
+                    height={100}
+                    width={120}
+                    alt="Sun Collectors Logo"
                   />
                 </a>
               </div>
@@ -73,16 +76,17 @@ export default function Home() {
                     </svg>
                   </button>
                   {/*
-        'Solutions' flyout menu, show/hide based on flyout menu state.
-
-        Entering: "transition ease-out duration-200"
-          From: "opacity-0 translate-y-1"
-          To: "opacity-100 translate-y-0"
-        Leaving: "transition ease-in duration-150"
-          From: "opacity-100 translate-y-0"
-          To: "opacity-0 translate-y-1"
-      */}
-                  <div className="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                     'Solutions' flyout menu, show/hide based on flyout menu state.
+             
+                     Entering: "transition ease-out duration-200"
+                       From: "opacity-0 translate-y-1"
+                       To: "opacity-100 translate-y-0"
+                     Leaving: "transition ease-in duration-150"
+                       From: "opacity-100 translate-y-0"
+                       To: "opacity-0 translate-y-1"
+                  */}
+                  {/* TODO Make me work with the JS */}
+                  <div className="invisible absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                       <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                         <a
@@ -244,22 +248,22 @@ export default function Home() {
                 </a>
                 <a
                   href="#"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-600 hover:bg-blue-700"
                 >
                   Sign up
                 </a>
               </div>
             </div>
             {/*
-  Mobile menu, show/hide based on mobile menu state.
-
-  Entering: "duration-200 ease-out"
-    From: "opacity-0 scale-95"
-    To: "opacity-100 scale-100"
-  Leaving: "duration-100 ease-in"
-    From: "opacity-100 scale-100"
-    To: "opacity-0 scale-95"
-*/}
+              Mobile menu, show/hide based on mobile menu state.
+            
+              Entering: "duration-200 ease-out"
+                From: "opacity-0 scale-95"
+                To: "opacity-100 scale-100"
+              Leaving: "duration-100 ease-in"
+                From: "opacity-100 scale-100"
+                To: "opacity-0 scale-95"
+            */}
             <div className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                 <div className="pt-5 pb-6 px-5">
@@ -429,7 +433,7 @@ export default function Home() {
                   <div className="mt-6">
                     <a
                       href="#"
-                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
                     >
                       Sign up
                     </a>
@@ -455,41 +459,46 @@ export default function Home() {
                   <div className="absolute inset-0">
                     <img
                       className="h-full w-full object-cover"
-                      src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
+                      src="https://images.unsplash.com/flagged/photo-1566838616838-c3a720672aad?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
                       alt="People working on laptops"
                     />
                     <div
-                      className="absolute inset-0 bg-indigo-700"
+                      className="absolute inset-0 bg-gray-400"
                       style={{ mixBlendMode: "multiply" }}
                     />
                   </div>
                   <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                     <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                       <span className="block text-white">
-                        Take control of your
+                        Sun Collectors @ Cville Solar
                       </span>
-                      <span className="block text-indigo-200">
-                        customer support
+                      <span className="block text-yellow-200">
+                        Own your energy for $0 down
                       </span>
                     </h1>
-                    <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
-                      Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                      irure qui lorem cupidatat commodo. Elit sunt amet fugiat
-                      veniam occaecat fugiat aliqua.
+                    <p className="mt-6 max-w-lg mx-auto text-center text-xl text-blue-100 sm:max-w-3xl">
+                      Leverage our unique financing strategy to roll your
+                      financing payment into your electrical savings - so you
+                      can <em>Go Solar</em> with no out-of-pocket money, and
+                      absolutely{" "}
+                      <span className="underline">
+                        no increase to your current budget
+                      </span>
+                      .
                     </p>
                     <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                       <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                         <a
                           href="#"
-                          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
+                          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-700 bg-white hover:bg-blue-50 sm:px-8"
                         >
-                          Get started
+                          Book a Consultation
                         </a>
                         <a
                           href="#"
-                          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
                         >
-                          Live demo
+                          Find out More
                         </a>
                       </div>
                     </div>
@@ -501,15 +510,11 @@ export default function Home() {
             <div className="bg-gray-100">
               <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
                 <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
-                  Trusted by over 5 very average small businesses
+                  Join over 1,000 customers already investing in their energy
                 </p>
                 <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
                   <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                    <img
-                      className="h-12"
-                      src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                      alt="Tuple"
-                    />
+                    <img />
                   </div>
                   <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <img
@@ -544,6 +549,234 @@ export default function Home() {
             </div>
           </div>
           {/* More main page content here... */}
+          {/* This example requires Tailwind CSS v2.0+ */}
+          <div className="relative bg-white py-16 sm:py-24 lg:py-24">
+            <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+              <h2 className="text-base font-semibold tracking-wider text-indigo-600 uppercase">
+                The best time to go solar was yesterday
+              </h2>
+              <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+                Virginians' Energy bills are going to rise - fast.
+              </p>
+              <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
+                Virginia will remove almost all coal power plants by 2024, and
+                the Energy Companies are allowed to raise rates by 4% every year
+                for the next 10 years.
+              </p>
+              <div className="mt-12">
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="pt-6">
+                    <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                      <div className="-mt-6">
+                        <div>
+                          <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                            {/* Heroicon name: outline/cloud-upload */}
+                            <svg
+                              className="h-6 w-6 text-white"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                          Solar Energy is Free
+                        </h3>
+                        <p className="mt-5 text-base text-gray-500">
+                          The power you generate using the natural resource on
+                          your property is free for you - all you need is the
+                          system to capture it.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="pt-6">
+                    <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                      <div className="-mt-6">
+                        <div>
+                          <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                            {/* Heroicon name: outline/lock-closed */}
+                            <svg
+                              className="h-6 w-6 text-white"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                          Get 26% back in Tax Credits
+                        </h3>
+                        <p className="mt-5 text-base text-gray-500">
+                          The Federal Government will reimburse 26% of your
+                          system and any installation in the form of tax
+                          credits, but this program phases out in 2024.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="pt-6">
+                    <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                      <div className="-mt-6">
+                        <div>
+                          <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                            {/* Heroicon name: outline/refresh */}
+                            <svg
+                              className="h-6 w-6 text-white"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                          25 year warranty on Panels
+                        </h3>
+                        <p className="mt-5 text-base text-gray-500">
+                          Sun Collectors installs the best panels in the
+                          business, which includes a 20 year warranty on the
+                          entire system.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="pt-6">
+                    <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                      <div className="-mt-6">
+                        <div>
+                          <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                            {/* Heroicon name: outline/shield-check */}
+                            <svg
+                              className="h-6 w-6 text-white"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                          10 year Monitoring & Labor
+                        </h3>
+                        <p className="mt-5 text-base text-gray-500">
+                          Sun Collectors monitors your system remotely for any
+                          issues, repairs and replaces any components not
+                          operating at peak efficiency - free.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="pt-6">
+                    <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                      <div className="-mt-6">
+                        <div>
+                          <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                            {/* Heroicon name: outline/cog */}
+                            <svg
+                              className="h-6 w-6 text-white"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                              />
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                          Only the Best Looking Panels
+                        </h3>
+                        <p className="mt-5 text-base text-gray-500">
+                          The panels Sun Collectors installs are state of the
+                          art. They
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="pt-6">
+                    <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                      <div className="-mt-6">
+                        <div>
+                          <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                            {/* Heroicon name: outline/server */}
+                            <svg
+                              className="h-6 w-6 text-white"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                          Increase Home Value
+                        </h3>
+                        <p className="mt-5 text-base text-gray-500">
+                          Ac tincidunt sapien vehicula erat auctor pellentesque
+                          rhoncus. Et magna sit morbi lobortis.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
     </>
