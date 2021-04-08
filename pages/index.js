@@ -76,7 +76,7 @@ export default function Home() {
                   Company
                 </a>
               </nav>
-              <div className=" md:flex items-center justify-end md:flex-1 lg:w-0">
+              <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <a
                   href="#"
                   className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium font-bold text-white bg-yellow-400 hover:bg-yellow-500"
@@ -144,27 +144,27 @@ export default function Home() {
                   <div className="mt-6">
                     <nav className="grid grid-cols-1 gap-7">
                       <a
-                        href="www.google.com"
+                        href="/about-us"
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white">
-                          {/* Heroicon name: outline/inbox */}
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                          {/* Heroicon name: outline/sun */}
                           <svg
-                            className="h-6 w-6"
                             xmlns="http://www.w3.org/2000/svg"
+                            className="h-6 w-6"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
-                            aria-hidden="true"
                           >
                             <path
                               strokeLinecap="round"
                               strokeLinejoin="round"
                               strokeWidth={2}
-                              d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
+                              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
                             />
                           </svg>
                         </div>
+
                         <div className="ml-4 text-base font-medium text-gray-900">
                           About Us
                         </div>
@@ -172,22 +172,24 @@ export default function Home() {
                       <a
                         href="#"
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                        onClick={() =>
+                          window.open("https://suncollectors.solar/", "_blank")
+                        }
                       >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white">
-                          {/* Heroicon name: outline/annotation */}
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                          {/* Heroicon name: outline/house */}
                           <svg
-                            className="h-6 w-6"
                             xmlns="http://www.w3.org/2000/svg"
+                            className="h-6 w-6"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
-                            aria-hidden="true"
                           >
                             <path
                               strokeLinecap="round"
                               strokeLinejoin="round"
                               strokeWidth={2}
-                              d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
                             />
                           </svg>
                         </div>
@@ -199,21 +201,20 @@ export default function Home() {
                         href="/partners"
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white">
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
                           {/* Heroicon name: outline/chat-alt-2 */}
                           <svg
-                            className="h-6 w-6"
                             xmlns="http://www.w3.org/2000/svg"
+                            className="h-6 w-6"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
-                            aria-hidden="true"
                           >
                             <path
                               strokeLinecap="round"
                               strokeLinejoin="round"
                               strokeWidth={2}
-                              d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+                              d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
                             />
                           </svg>
                         </div>
@@ -226,13 +227,16 @@ export default function Home() {
                 </div>
                 <div className="py-6 px-5">
                   <div className="grid grid-cols-2 gap-4"></div>
-                  <div className="mt-6">
-                    <p className="mt-6 text-center text-base font-medium text-gray-500">
-                      Run the Numbers &#183;{" "}
-                      <a href="#" className="text-gray-900">
-                        Get a Free Custom Design
-                      </a>
+                  <div className="">
+                    <p className="pb-4 text-base font-medium text-gray-500">
+                      Run the Numbers
                     </p>
+                    <a
+                      href="#"
+                      className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium font-bold text-white bg-yellow-400 hover:bg-yellow-500"
+                    >
+                      Get a Free Custom Design
+                    </a>
                   </div>
                 </div>
               </div>
@@ -581,7 +585,7 @@ export default function Home() {
                   alt="Beautiful house with solar panels"
                 />
                 <div
-                  className="absolute inset-0 md:bg-gray-300 sm:bg-gray-500"
+                  className="absolute inset-0 md:bg-gray-300 bg-gray-500"
                   style={{ mixBlendMode: "multiply" }}
                 />
               </div>
