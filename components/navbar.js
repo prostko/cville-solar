@@ -22,8 +22,8 @@ const Navbar = (props) => {
                   priority
                   src="/images/sun-collectors-logo.png"
                   className="h-8"
-                  height={100}
-                  width={120}
+                  height={129}
+                  width={174}
                   layout="intrinsic"
                   alt="Sun Collectors Logo"
                 />
@@ -83,18 +83,12 @@ const Navbar = (props) => {
                 Company
               </a>
             </nav>
-            <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            <div className="md:flex items-center justify-end md:flex-1 lg:w-0">
               <a
                 href="#"
-                className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+                className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium font-bold text-white bg-yellow-400 hover:bg-yellow-500"
               >
-                Sign in
-              </a>
-              <a
-                href="#"
-                className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-              >
-                Sign up
+                Get Your Free Custom Design
               </a>
             </div>
           </div>
