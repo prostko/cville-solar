@@ -19,8 +19,8 @@ export default function Home() {
                     priority
                     src="/images/sun-collectors-logo.png"
                     className="h-8"
-                    height={100}
-                    width={120}
+                    height={129}
+                    width={174}
                     layout="intrinsic"
                     alt="Sun Collectors Logo"
                   />
@@ -604,7 +604,7 @@ export default function Home() {
                     <div className="inline-flex rounded-md shadow">
                       <a
                         href="#"
-                        className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium font-bold rounded-md text-gray-700 bg-yellow-200 hover:bg-gray-50"
+                        className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium font-extrabold rounded-md text-gray-600 bg-yellow-200 hover:bg-gray-50"
                       >
                         Schedule a Consultation
                       </a>
