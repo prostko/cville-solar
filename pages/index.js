@@ -247,10 +247,12 @@ export default function Home() {
               <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
                   <div className="absolute inset-0">
-                    <img
-                      className="h-full w-full object-cover"
-                      src="https://images.unsplash.com/flagged/photo-1566838616838-c3a720672aad?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
-                      alt="Solar panels across neighborhood roofs"
+                    <Image
+                      priority
+                      src="/images/solar-neighborhood.jpg"
+                      className="w-full h-full object-cover"
+                      layout="fill"
+                      alt="Solar panels across beautiful neighborhood roofs"
                     />
                     <div
                       className="absolute inset-0 bg-gray-400"
@@ -569,15 +571,17 @@ export default function Home() {
 
           <>
             {/* This example requires Tailwind CSS v2.0+ */}
-            <div className="relative bg-blue-900">
+            <div className="relative bg-blue-600">
               <div className="h-56 bg-gray-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-                <img
+                <Image
+                  priority
+                  src="/images/single-house-solar.jpg"
                   className="w-full h-full object-cover"
-                  src="https://images.unsplash.com/flagged/photo-1566838634698-48b165cb0a9d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80"
-                  alt
+                  layout="fill"
+                  alt="Beautiful house with solar panels"
                 />
                 <div
-                  className="absolute inset-0 bg-gray-300"
+                  className="absolute inset-0 md:bg-gray-300 sm:bg-gray-500"
                   style={{ mixBlendMode: "multiply" }}
                 />
               </div>
