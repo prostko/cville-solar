@@ -62,7 +62,7 @@ export default function Home() {
                   About Us
                 </a>
                 <a
-                  href="#"
+                  href="/partners"
                   className="text-base font-medium text-gray-500 hover:text-gray-900"
                 >
                   Partners
@@ -196,7 +196,7 @@ export default function Home() {
                         </div>
                       </a>
                       <a
-                        href="#"
+                        href="/partners"
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       >
                         <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white">
