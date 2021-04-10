@@ -2,9 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useState } from "react";
+import { openPopupWidget } from "react-calendly";
 
 export default function Home() {
   const [isOn, setIsOn] = useState(false);
+  const url = "https://calendly.com/ericprostko9";
+  const openCalendar = () => openPopupWidget({ url });
 
   return (
     <>
@@ -81,6 +84,7 @@ export default function Home() {
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <a
                   href="#"
+                  onClick={openCalendar}
                   className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium font-bold text-white bg-yellow-400 hover:bg-yellow-500"
                 >
                   Get Your Free Custom Design
@@ -289,6 +293,7 @@ export default function Home() {
                       <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                         <a
                           href="#"
+                          onClick={openCalendar}
                           className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-700 bg-white hover:bg-blue-50 sm:px-8"
                         >
                           Book a Consultation
@@ -614,6 +619,7 @@ export default function Home() {
                     <div className="inline-flex rounded-md shadow">
                       <a
                         href="#"
+                        onClick={openCalendar}
                         className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium font-extrabold rounded-md text-gray-600 bg-yellow-200 hover:bg-gray-50"
                       >
                         Schedule a Consultation

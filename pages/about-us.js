@@ -1,6 +1,10 @@
 import Navbar from "../components/navbar.js";
+import { openPopupWidget } from "react-calendly";
 
 const AboutUs = () => {
+  const url = "https://calendly.com/ericprostko9";
+  const openCalendar = () => openPopupWidget({ url });
+
   return (
     <>
       <Navbar active="about-us" />
@@ -74,6 +78,7 @@ require('@tailwindcss/typography'),
                   <div className="rounded-md shadow">
                     <a
                       href="#"
+                      onClick={openCalendar}
                       className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-bold text-white bg-yellow-400 hover:bg-yellow-500"
                     >
                       Get your free custom design
