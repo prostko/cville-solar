@@ -69,6 +69,7 @@ const Navbar = (props) => {
               </a>
               <a
                 href="/partners"
+                style={{ display: "none" }}
                 className={setActive("partners" === props.active)}
               >
                 Partners

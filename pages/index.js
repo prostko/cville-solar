@@ -63,6 +63,7 @@ export default function Home() {
                 </a>
                 <a
                   href="/partners"
+                  style={{ display: "none" }}
                   className="text-base font-medium text-gray-500 hover:text-gray-900"
                 >
                   Partners
@@ -71,6 +72,7 @@ export default function Home() {
                   onClick={() =>
                     window.open("https://suncollectors.solar/", "_blank")
                   }
+                  href=""
                   className="text-base font-medium text-gray-500 hover:text-gray-900"
                 >
                   Company
@@ -199,6 +201,7 @@ export default function Home() {
                       </a>
                       <a
                         href="/partners"
+                        style={{ display: "none" }}
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       >
                         <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
