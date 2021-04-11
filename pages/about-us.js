@@ -145,7 +145,7 @@ const AboutUs = () => {
                     <img
                       className="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-blue-300"
                       src="/images/chris-testimonial.jpg"
-                      alt
+                      alt="profile picture of testimonial"
                     />
                   </div>
                   <span className="relative ml-4 text-blue-300 font-semibold leading-6 sm:ml-24 sm:pl-1">
