@@ -7,7 +7,10 @@ import { openPopupWidget } from "react-calendly";
 export default function Home() {
   const [isOn, setIsOn] = useState(false);
   const url = "https://calendly.com/ericprostko9";
-  const openCalendar = () => openPopupWidget({ url });
+  const openCalendar = (event) => {
+    event.preventDefault();
+    openPopupWidget({ url });
+  };
 
   return (
     <>
@@ -34,7 +37,8 @@ export default function Home() {
                   type="button"
                   className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                   aria-expanded="false"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
                     setIsOn(!isOn);
                   }}
                 >
@@ -72,9 +76,10 @@ export default function Home() {
                   Partners
                 </a>
                 <a
-                  onClick={() =>
-                    window.open("https://suncollectors.solar/", "_blank")
-                  }
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.open("https://suncollectors.solar/", "_blank");
+                  }}
                   href=""
                   className="text-base font-medium text-gray-500 hover:text-gray-900"
                 >
@@ -178,9 +183,10 @@ export default function Home() {
                       <a
                         href="#"
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
-                        onClick={() =>
-                          window.open("https://suncollectors.solar/", "_blank")
-                        }
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.open("https://suncollectors.solar/", "_blank");
+                        }}
                       >
                         <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
                           {/* Heroicon name: outline/house */}
@@ -240,6 +246,7 @@ export default function Home() {
                     </p>
                     <a
                       href="#"
+                      onClick={openCalendar}
                       className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium font-bold text-white bg-yellow-400 hover:bg-yellow-500"
                     >
                       Get a Free Custom Design

@@ -1,11 +1,18 @@
 import Image from "next/image";
 import { useState } from "react";
+import { openPopupWidget } from "react-calendly";
 
 function setActive(isActive) {
   return `text-base font-medium ${
     isActive ? "text-gray-900" : "text-gray-500 hover:text-gray-900"
   }`;
 }
+
+const url = "https://calendly.com/ericprostko9";
+const openCalendar = (event) => {
+  event.preventDefault();
+  openPopupWidget({ url });
+};
 
 const Navbar = (props) => {
   const [isOn, setIsOn] = useState(false);
@@ -32,9 +39,11 @@ const Navbar = (props) => {
             <div className="-mr-2 -my-2 md:hidden">
               <button
                 type="button"
-                className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
                 aria-expanded="false"
-                onClick={() => {
+                onClick={(event) => {
+                  props.handleOpen(true);
+                  event.preventDefault();
                   setIsOn(true);
                 }}
               >
@@ -84,7 +93,7 @@ const Navbar = (props) => {
                 Company
               </a>
             </nav>
-            <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            <div className="hidden mobile opacity-100 md:flex items-center justify-end md:flex-1 lg:w-0">
               <a
                 href="#"
                 className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium font-bold text-white bg-yellow-400 hover:bg-yellow-500"
@@ -112,19 +121,25 @@ To: "opacity-0 scale-95"
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
-                  <img
+                  <Image
+                    priority
+                    src="/images/sun-collectors-logo.png"
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt="Workflow"
+                    height={129}
+                    width={174}
+                    layout="intrinsic"
+                    alt="Sun Collectors Logo"
                   />
                 </div>
                 <div className="-mr-2">
                   <button
                     type="button"
-                    onClick={() => {
+                    onClick={(event) => {
+                      props.handleOpen(false);
+                      event.preventDefault();
                       setIsOn(false);
                     }}
-                    className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                    className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
                   >
                     <span className="sr-only">Close menu</span>
                     {/* Heroicon name: outline/x */}
@@ -149,180 +164,90 @@ To: "opacity-0 scale-95"
               <div className="mt-6">
                 <nav className="grid gap-y-8">
                   <a
-                    href="#"
+                    href="/"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
-                    {/* Heroicon name: outline/chart-bar */}
+                    {/* Heroicon name: solid/home */}
                     <svg
-                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
                       xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
+                      className="h-5 w-5 flex-shrink-0 text-blue-600"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                      />
+                      <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                     </svg>
                     <span className="ml-3 text-base font-medium text-gray-900">
-                      Analytics
+                      Home
                     </span>
                   </a>
                   <a
-                    href="#"
+                    href="/about-us"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
-                    {/* Heroicon name: outline/cursor-click */}
+                    {/* Heroicon name: outline/sun */}
                     <svg
-                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
                       xmlns="http://www.w3.org/2000/svg"
+                      className="flex-shrink-0 h-6 w-6 text-blue-600"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
-                      aria-hidden="true"
                     >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
                       />
                     </svg>
                     <span className="ml-3 text-base font-medium text-gray-900">
-                      Engagement
+                      About Us
                     </span>
                   </a>
+
                   <a
-                    href="#"
+                    href=""
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open("https://suncollectors.solar/", "_blank");
+                    }}
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
-                    {/* Heroicon name: outline/shield-check */}
+                    {/* Heroicon name: outline/home */}
                     <svg
-                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
                       xmlns="http://www.w3.org/2000/svg"
+                      className="flex-shrink-0 h-6 w-6 text-blue-600"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
-                      aria-hidden="true"
                     >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
                       />
                     </svg>
                     <span className="ml-3 text-base font-medium text-gray-900">
-                      Security
+                      Company
                     </span>
                   </a>
-                  <a
-                    href="#"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                  >
-                    {/* Heroicon name: outline/view-grid */}
-                    <svg
-                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                      />
-                    </svg>
-                    <span className="ml-3 text-base font-medium text-gray-900">
-                      Integrations
-                    </span>
-                  </a>
-                  <a
-                    href="#"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                  >
-                    {/* Heroicon name: outline/refresh */}
-                    <svg
-                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                      />
-                    </svg>
-                    <span className="ml-3 text-base font-medium text-gray-900">
-                      Automations
-                    </span>
-                  </a>
+
+                  <div className="space-y-6">
+                    <div>
+                      <p className="mt-6 text-base font-medium text-gray-500">
+                        Run the Numbers
+                      </p>
+
+                      <a
+                        href="#"
+                        onClick={openCalendar}
+                        className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium font-bold text-white bg-yellow-400 hover:bg-yellow-500"
+                      >
+                        Get a Free Custom Design
+                      </a>
+                    </div>
+                  </div>
                 </nav>
-              </div>
-            </div>
-            <div className="py-6 px-5 space-y-6">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Pricing
-                </a>
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Docs
-                </a>
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Help Center
-                </a>
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Guides
-                </a>
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Events
-                </a>
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Security
-                </a>
-              </div>
-              <div>
-                <a
-                  href="#"
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-                >
-                  Sign up
-                </a>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
-                </p>
               </div>
             </div>
           </div>

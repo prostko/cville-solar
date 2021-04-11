@@ -1,14 +1,21 @@
 import Navbar from "../components/navbar.js";
 import { openPopupWidget } from "react-calendly";
+import { useState } from "react";
+import { colors } from "tailwindcss/defaultTheme";
 
 const AboutUs = () => {
+  const [isOn, setIsOn] = useState(false);
+
   const url = "https://calendly.com/ericprostko9";
-  const openCalendar = () => openPopupWidget({ url });
+  const openCalendar = (event) => {
+    event.preventDefault();
+    openPopupWidget({ url });
+  };
+  const handleCallback = (data) => setIsOn(data);
 
   return (
     <>
-      <Navbar active="about-us" />
-
+      <Navbar active="about-us" handleOpen={handleCallback} />
       <>
         {/*
   This example requires Tailwind CSS v2.0+ 
@@ -28,7 +35,7 @@ require('@tailwindcss/typography'),
 */}
         <div className="py-16 bg-gray-50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8">
-            <div className="text-base max-w-prose mx-auto lg:max-w-none">
+            <div className="text-base max-w-prose mx-auto z-10 lg:max-w-none">
               <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">
                 Cville Native
               </h2>
@@ -36,7 +43,11 @@ require('@tailwindcss/typography'),
                 Welcome to Sun Collectors @ Cville Solar
               </p>
             </div>
-            <div className="relative z-10 text-base max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
+            <div
+              className={`${
+                isOn ? "invisible" : "z-10"
+              } relative text-base max-w-prose mx-auto z-10 lg:max-w-5xl lg:mx-0 lg:pr-72`}
+            >
               <p className="text-lg text-gray-500">
                 We are essentially project managers for your solar system, using
                 our experience in thousands of builds to get you not only the
