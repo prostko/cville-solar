@@ -5,7 +5,7 @@ import { useState } from "react";
 const AboutUs = () => {
   const [isOn, setIsOn] = useState(false);
 
-  const url = "https://calendly.com/ericprostko9";
+  const url = "https://calendly.com/nathaniel-at-sun-collectors/15min";
   const openCalendar = (event) => {
     event.preventDefault();
     openPopupWidget({ url });

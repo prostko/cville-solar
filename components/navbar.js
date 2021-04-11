@@ -96,6 +96,7 @@ const Navbar = (props) => {
             <div className="hidden mobile opacity-100 md:flex items-center justify-end md:flex-1 lg:w-0">
               <a
                 href="#"
+                onClick={openCalendar}
                 className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium font-bold text-white bg-yellow-400 hover:bg-yellow-500"
               >
                 Get Your Free Custom Design
