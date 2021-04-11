@@ -8,7 +8,7 @@ function setActive(isActive) {
   }`;
 }
 
-const url = "https://calendly.com/ericprostko9";
+const url = "https://calendly.com/nathaniel-at-sun-collectors/15min";
 const openCalendar = (event) => {
   event.preventDefault();
   openPopupWidget({ url });
